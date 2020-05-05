@@ -1,11 +1,12 @@
 <?php
-function build_proxy_url($url) {
-    $worker = 'CF_WORKER_URL';
-    $worker = trim($worker, '/');
-    return $worker . '/-----' . $url;
-}
 function getRequest($url) {
-    return HTTPGetRequest(build_proxy_url($url));
+	if (!function_exists('HTTPGETRequest')) {
+        function HTTPGETRequest($url)
+        {
+            return file_get_contents($url);
+        }
+    }
+    return HTTPGetRequest($url);
 }
 class DoubanMovie
 {
@@ -102,7 +103,9 @@ class DoubanMovie
         $min = $this->getJsonValue('image', '');
         $raw = str_replace('s_ratio_poster', 'l', $min);
 
-        return build_proxy_url(str_replace('webp', 'jpg', $raw));
+        $result = str_replace('webp', 'jpg', $raw)
+        error_log(print_r($result, true), 3, "/var/packages/VideoStation/target/plugins/syno_themoviedb/my-errors.log");
+        return $result;
     }
 
     protected function getJsonValue($key, $default)
