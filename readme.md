@@ -18,13 +18,13 @@
 
 安装：
 1. ssh 登录群晖系统
-2. 执行`wget https://raw.githubusercontent.com/jswh/synology_video_station_douban_plugin/master/install.sh`
+2. 执行`wget https://raw.githubusercontent.com/stpice/synology_video_station_douban_plugin/master/install.sh`
 3. 执行`sudo bash install.sh uninstall` （第一次安装可以跳过这个步骤）
 4. 执行`sudo bash install.sh install 'http://quiet-cake-f23b.jswh-cf-workers.workers.dev'`
 
 卸载
 1. ssh 登录群晖系统
-2. 执行`wget https://raw.githubusercontent.com/jswh/synology_video_station_douban_plugin/master/install.sh`
+2. 执行`wget https://raw.githubusercontent.com/stpice/synology_video_station_douban_plugin/master/install.sh`
 3. 执行`sudo bash install.sh uninstall`
 
 
@@ -34,7 +34,7 @@
 1. 注册cloudflare https://dash.cloudflare.com/sign-up
 2. 登录后选择Workers ![批注 2020-04-09 114934.jpg](https://i.loli.net/2020/04/09/w8r62KjcpP4S5Tt.jpg)
 3. 点击create worker ![批注 2020-04-09 115054.jpg](https://i.loli.net/2020/04/09/KsI9qxpJhf8BciQ.jpg)
-4. 在左侧编辑框中黏贴代理代码.代码在[cf-worker.js](https://github.com/jswh/synology_video_station_douban_plugin/blob/master/cf-worker.js).然后点击save and deploy ![批注 2020-04-09 115254.jpg](https://i.loli.net/2020/04/09/SMl2sQg1wfImHKx.jpg)
+4. 在左侧编辑框中黏贴代理代码.代码在[cf-worker.js](https://github.com/stpice/synology_video_station_douban_plugin/blob/master/cf-worker.js).然后点击save and deploy ![批注 2020-04-09 115254.jpg](https://i.loli.net/2020/04/09/SMl2sQg1wfImHKx.jpg)
 5. 预览界面上有你的worker代理地址，安装的时候替换即可 ![批注 2020-04-09 115714.jpg](https://i.loli.net/2020/04/09/evsglLICjf6dXE5.jpg)
 
 所有权利归老哥所有
