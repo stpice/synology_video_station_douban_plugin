@@ -57,7 +57,7 @@ function install()
 
     chown VideoStation:VideoStation $vPlugins/syno_themoviedb/search.php $vPlugins/syno_synovideodb/search.php $vPlugins/syno_thetvdb/search.php $vUI/ui/videostation2.js $vPlugins/syno_file_assets/episode.inc.php
 
-    mv $vPlugins/syno_file_assets/douban.tmp.php > $vPlugins/syno_file_assets/douban.php
+    mv $vPlugins/syno_file_assets/douban.tmp.php $vPlugins/syno_file_assets/douban.php
 
     cd -
 
